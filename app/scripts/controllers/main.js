@@ -19,8 +19,7 @@ angular.module('angularDrupalFromsExampleApp')
 
     $scope.post = {
       label: 'Some title',
-      body: 'The body'
-
+      body: 'The body, with Gizra'
     };
 
     $scope.submitAuthenticationForm = function() {
@@ -34,7 +33,7 @@ angular.module('angularDrupalFromsExampleApp')
     $scope.createArticle = function(data) {
       Articlesresource.createArticle(data)
         .success(function(data) {
-        $log.log(data);
+          $scope.post = data;
       });
     }
   });

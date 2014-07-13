@@ -31,7 +31,6 @@ angular.module('angularDrupalFromsExampleApp')
         };
 
         var url = DrupalAuthenticate.getBackendUrl() + '/api/v1/articles';
-
         return $http.post(url, $.param(data), config);
       }
     }

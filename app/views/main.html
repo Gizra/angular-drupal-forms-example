@@ -30,9 +30,13 @@
 
   <div ng-show="authenticated">
 
-    {{ post }}
+    <quick-post ng-hide="post.id" label="post.label" body="post.body" on-submit="createArticle"></quick-post>
 
-    <quick-post label="post.label" body="post.body" on-submit="createArticle"></quick-post>
+
+    <div ng-show="post.id">
+      {{ post }}
+    </div>
+
 
   </div>
 
