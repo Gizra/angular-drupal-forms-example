@@ -32,7 +32,25 @@ angular.module('angularDrupalFromsExampleApp')
 
         var url = DrupalAuthenticate.getBackendUrl() + '/api/v1/articles';
         return $http.post(url, $.param(data), config);
+      },
+
+      updateArticle: function(data, id) {
+        var config = {
+          headers: {
+            // Call the correct resource version (v1.5) that has the "body" and
+            // "image" fields exposed.
+            "X-Restful-Minor-Version": 5,
+            "X-Access-Token": DrupalAuthenticate.getToken()
+          }
+        };
+
+        var url = DrupalAuthenticate.getBackendUrl() + '/api/v1/articles/' + id;
+        return $http({
+          method: 'patch',
+          url: url,
+          headers: config.headers,
+          data: $.param(data)
+        });
       }
     }
-
   });

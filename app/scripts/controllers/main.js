@@ -25,7 +25,6 @@ angular.module('angularDrupalFromsExampleApp')
     $scope.submitAuthenticationForm = function() {
       DrupalAuthenticate.authenticate($scope.authenticationData)
         .then(function(data) {
-          $log.log(data);
           $scope.authenticated = true;
         });
     };
@@ -35,5 +34,12 @@ angular.module('angularDrupalFromsExampleApp')
         .success(function(data) {
           $scope.post = data;
       });
+    };
+
+    $scope.updateArticle = function(data, property) {
+      Articlesresource.updateArticle({label: data}, $scope.post.id)
+        .success(function(data) {
+          $scope.post = data;
+        });
     }
   });

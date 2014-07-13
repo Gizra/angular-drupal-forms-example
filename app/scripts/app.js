@@ -31,4 +31,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function(editableOptions) {
+    editableOptions.theme = 'bs3';
   });
