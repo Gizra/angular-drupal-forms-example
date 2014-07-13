@@ -8,7 +8,7 @@
  * Controller of the angularDrupalFromsExampleApp
  */
 angular.module('angularDrupalFromsExampleApp')
-  .controller('MainCtrl', function ($scope, DrupalAuthenticate, $log) {
+  .controller('MainCtrl', function ($scope, DrupalAuthenticate, Articlesresource, $log) {
     $scope.authenticationData = {
       backendUrl: 'http://local/d7_dev',
       name: 'admin',
@@ -28,6 +28,13 @@ angular.module('angularDrupalFromsExampleApp')
         .then(function(data) {
           $log.log(data);
           $scope.authenticated = true;
-        })
+        });
+    };
+
+    $scope.createArticle = function(data) {
+      Articlesresource.createArticle(data)
+        .success(function(data) {
+        $log.log(data);
+      });
     }
   });
