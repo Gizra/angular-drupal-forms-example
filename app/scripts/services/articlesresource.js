@@ -8,7 +8,7 @@
  * Service in the angularDrupalFromsExampleApp.
  */
 angular.module('angularDrupalFromsExampleApp')
-  .service('Articlesresource', function Articlesresource(DrupalAuthenticate, $http) {
+  .service('Articlesresource', function Articlesresource(DrupalAuthenticate, $http, $log) {
 
     return {
       /**
@@ -32,7 +32,7 @@ angular.module('angularDrupalFromsExampleApp')
 
         var url = DrupalAuthenticate.getBackendUrl() + '/api/v1/articles';
 
-        return $http.post(url, data, config);
+        return $http.post(url, $.param(data), config);
       }
     }
 
