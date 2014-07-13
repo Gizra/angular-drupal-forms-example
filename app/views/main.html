@@ -9,7 +9,7 @@
 
 <div class="row marketing">
 
-  <form role="form" ng-submit="submitAuthenticationForm()">
+  <form ng-hide="authenticated" role="form" ng-submit="submitAuthenticationForm()">
     <div class="form-group">
       <label for="backend-url">Backend URL</label>
       <input type="url" ng-model="authenticationData.backendUrl" class="form-control" id="backend-url" placeholder="Backend URL" required >
@@ -27,6 +27,12 @@
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
+
+  <div ng-show="authenticated">
+
+    <quick-post title="post.title" body ="post.body"></quick-post>
+
+  </div>
 
 </div>
 
