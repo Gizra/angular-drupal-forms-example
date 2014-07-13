@@ -17,7 +17,11 @@ angular.module('angularDrupalFromsExampleApp')
 
     $scope.authenticated = false;
 
-    $scope.post = {};
+    $scope.post = {
+      label: 'Some title',
+      body: 'The body'
+
+    };
 
     $scope.submitAuthenticationForm = function() {
       DrupalAuthenticate.authenticate($scope.authenticationData)

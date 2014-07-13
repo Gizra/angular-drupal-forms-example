@@ -12,8 +12,8 @@ angular.module('angularDrupalFromsExampleApp')
       templateUrl: 'scripts/directives/quickPostArticle/index.html',
       restrict: 'E',
       scope: {
-        title: '@',
-        body: '@'
+        label: '=label',
+        body: '=body'
       },
       link: function postLink(scope, element, attrs) {
       }

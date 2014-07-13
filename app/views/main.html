@@ -30,7 +30,9 @@
 
   <div ng-show="authenticated">
 
-    <quick-post title="post.title" body ="post.body"></quick-post>
+    {{ post }}
+
+    <quick-post label="post.label" body="post.body"></quick-post>
 
   </div>
 
