@@ -25,11 +25,12 @@ angular.module('angularDrupalFromsExampleApp')
           headers: {
             // Call the correct resource version (v1.5) that has the "body" and
             // "image" fields exposed.
-            "X-Restful-Minor-Version": 5
+            "X-Restful-Minor-Version": 5,
+            "X-Access-Token": DrupalAuthenticate.getToken()
           }
         };
 
-        var url = DrupalAuthenticate.getBackendUrl() + '/api/v1/articles?access_token=' + DrupalAuthenticate.getToken();
+        var url = DrupalAuthenticate.getBackendUrl() + '/api/v1/articles';
 
         return $http.post(url, data, config);
       }

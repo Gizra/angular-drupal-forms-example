@@ -104,8 +104,9 @@ angular.module('angularDrupalFromsExampleApp')
           }
         }).
           success(function(data, status, headers, config) {
-            self.setToken(data.access_token)
-            defer.resolve(data.access_token);
+            $log.log(data);
+            self.setToken(data['access_token'])
+            defer.resolve(data['access_token']);
           }).
           error(function(data, status, headers, config) {
             defer.reject('Wrong backend url, or credentails');
