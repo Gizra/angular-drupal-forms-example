@@ -22,7 +22,7 @@ angular.module('angularDrupalFromsExampleApp')
         });
 
         scope.updateArticle = function(data, fieldName) {
-          scope.onSubmit(data, fieldName);
+          return scope.onSubmit(data, fieldName);
         }
       }
     };

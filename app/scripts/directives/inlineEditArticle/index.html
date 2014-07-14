@@ -4,4 +4,11 @@
   <div editable-text="post.label" onbeforesave="updateArticle($data, 'label')">{{ post.label }}</div>
 
   <div editable-textarea="post.body" onbeforesave="updateArticle($data, 'body')">{{ post.body }}</div>
+
+  <div class="errors">
+    <ul ng-show="errors.body">
+      <li ng-repeat="error in errors.body">{{error}}</li>
+    </ul>
+  </div>
+
 </div>

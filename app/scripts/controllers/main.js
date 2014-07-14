@@ -45,6 +45,7 @@ angular.module('angularDrupalFromsExampleApp')
       Articlesresource.createArticle(data)
         .success(function(data) {
           $scope.post = data;
+          $scope.errors = null;
         })
         .error(function(data) {
           $scope.errors = data.errors;
@@ -65,6 +66,7 @@ angular.module('angularDrupalFromsExampleApp')
       return Articlesresource.updateArticle(sendData, $scope.post.id)
         .success(function(data) {
           $scope.post = data;
+          $scope.errors = null;
         })
         .error(function(data) {
           $scope.errors = data.errors;
