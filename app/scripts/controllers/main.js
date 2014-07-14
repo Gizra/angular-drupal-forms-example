@@ -18,8 +18,8 @@ angular.module('angularDrupalFromsExampleApp')
     $scope.authenticated = false;
 
     $scope.post = {
-      label: 'Some title',
-      body: 'The body, with Gizra'
+      label: 'Some title (longer than 2 chars)',
+      body: 'The body, with Gizra (try removing it...)'
     };
 
     // Error from the serverSide.
