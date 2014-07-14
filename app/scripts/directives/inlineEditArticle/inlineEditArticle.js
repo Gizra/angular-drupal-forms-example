@@ -13,6 +13,11 @@ angular.module('angularDrupalFromsExampleApp')
       restrict: 'E',
       scope: {
         post: '=post'
+      },
+      link: function postLink(scope, element, attrs) {
+        scope.$watch('post.body', function() {
+          scope.post.body = String(scope.post.body).replace(/<[^>]+>/gm, '');
+        });
       }
     };
   });
