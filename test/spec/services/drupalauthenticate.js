@@ -3,7 +3,7 @@
 describe('Service: drupalAuthenticate', function () {
 
   // load the service's module
-  beforeEach(module('angularDrupalFromsExampleApp'));
+  beforeEach(module('angularDrupalFormsExampleApp'));
 
   // instantiate service
   var drupalAuthenticate;

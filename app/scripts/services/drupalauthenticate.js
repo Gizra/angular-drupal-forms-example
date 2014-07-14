@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name angularDrupalFromsExampleApp.drupalAuthenticate
+ * @name angularDrupalFormsExampleApp.drupalAuthenticate
  * @description
  * # drupalAuthenticate
- * Service in the angularDrupalFromsExampleApp.
+ * Service in the angularDrupalFormsExampleApp.
  */
-angular.module('angularDrupalFromsExampleApp')
+angular.module('angularDrupalFormsExampleApp')
   .service('DrupalAuthenticate', function DrupalAuthenticate($q, $http) {
 
     var cache = {

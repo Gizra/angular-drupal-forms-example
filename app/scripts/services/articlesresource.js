@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name angularDrupalFromsExampleApp.articlesResource
+ * @name angularDrupalFormsExampleApp.articlesResource
  * @description
  * # articlesResource
- * Service in the angularDrupalFromsExampleApp.
+ * Service in the angularDrupalFormsExampleApp.
  */
-angular.module('angularDrupalFromsExampleApp')
+angular.module('angularDrupalFormsExampleApp')
   .service('Articlesresource', function Articlesresource(DrupalAuthenticate, $http) {
 
     return {

@@ -3,7 +3,7 @@
 describe('Service: articlesResource', function () {
 
   // load the service's module
-  beforeEach(module('angularDrupalFromsExampleApp'));
+  beforeEach(module('angularDrupalFormsExampleApp'));
 
   // instantiate service
   var articlesResource;

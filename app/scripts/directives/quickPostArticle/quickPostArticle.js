@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name angularDrupalFromsExampleApp.directive:quickPost
+ * @name angularDrupalFormsExampleApp.directive:quickPost
  * @description
  * # quickPost
  */
-angular.module('angularDrupalFromsExampleApp')
+angular.module('angularDrupalFormsExampleApp')
   .directive('quickPostArticle', function ($log) {
     return {
       templateUrl: 'scripts/directives/quickPostArticle/index.html',

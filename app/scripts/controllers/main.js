@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name angularDrupalFromsExampleApp.controller:MainCtrl
+ * @name angularDrupalFormsExampleApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the angularDrupalFromsExampleApp
+ * Controller of the angularDrupalFormsExampleApp
  */
-angular.module('angularDrupalFromsExampleApp')
+angular.module('angularDrupalFormsExampleApp')
   .controller('MainCtrl', function ($scope, DrupalAuthenticate, Articlesresource, $log) {
     $scope.authenticationData = {
       backendUrl: 'http://local/d7_dev',

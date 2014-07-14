@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name angularDrupalFromsExampleApp
+ * @name angularDrupalFormsExampleApp
  * @description
- * # angularDrupalFromsExampleApp
+ * # angularDrupalFormsExampleApp
  *
  * Main module of the application.
  */
 angular
-  .module('angularDrupalFromsExampleApp', [
+  .module('angularDrupalFormsExampleApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

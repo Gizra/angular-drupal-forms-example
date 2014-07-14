@@ -3,7 +3,7 @@
 describe('Directive: quickPost', function () {
 
   // load the directive's module
-  beforeEach(module('angularDrupalFromsExampleApp'));
+  beforeEach(module('angularDrupalFormsExampleApp'));
 
   var element,
     scope;
