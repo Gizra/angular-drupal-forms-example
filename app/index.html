@@ -23,12 +23,7 @@
     <!-- Add your site or application content here -->
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">angularDrupalFromsExample</h3>
+        <h3 class="text-muted">Headless Drupal - Inline Edit</h3>
       </div>
 
       <div ng-view=""></div>
@@ -87,8 +82,8 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/drupalauthenticate.js"></script>
+        <script src="scripts/directives/inlineEditArticle/inlineEditArticle.js"></script>
         <script src="scripts/directives/quickPostArticle/quickPostArticle.js"></script>
         <script src="scripts/services/articlesresource.js"></script>
         <!-- endbuild -->

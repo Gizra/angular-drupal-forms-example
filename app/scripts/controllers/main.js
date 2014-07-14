@@ -22,6 +22,9 @@ angular.module('angularDrupalFromsExampleApp')
       body: 'The body, with Gizra'
     };
 
+    /**
+     * Login a user, and get the access token from the server.
+     */
     $scope.submitAuthenticationForm = function() {
       DrupalAuthenticate.authenticate($scope.authenticationData)
         .then(function(data) {
@@ -29,6 +32,12 @@ angular.module('angularDrupalFromsExampleApp')
         });
     };
 
+    /**
+     * Create an article via POST.
+     *
+     * @param data
+     *   Object with the data to POST.
+     */
     $scope.createArticle = function(data) {
       Articlesresource.createArticle(data)
         .success(function(data) {
@@ -36,8 +45,18 @@ angular.module('angularDrupalFromsExampleApp')
       });
     };
 
-    $scope.updateArticle = function(data, property) {
-      Articlesresource.updateArticle({label: data}, $scope.post.id)
+    /**
+     * Update via PATCH as article.
+     *
+     * @param data
+     *   The value of the field.
+     * @param fieldName
+     *   The field name (e.g. label or body).
+     */
+    $scope.updateArticle = function(data, fieldName) {
+      var sendData = {};
+      sendData[fieldName] = data;
+      Articlesresource.updateArticle(sendData, $scope.post.id)
         .success(function(data) {
           $scope.post = data;
         });

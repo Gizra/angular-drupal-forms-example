@@ -16,17 +16,21 @@
       <label for="user-password">Password</label>
       <input type="password" ng-model="authenticationData.pass" class="form-control" id="user-password" placeholder="Password" required>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
   <div ng-show="authenticated">
 
-    <quick-post ng-hide="post.id" label="post.label" body="post.body" on-submit="createArticle"></quick-post>
+    <quick-post-article ng-hide="post.id" label="post.label" body="post.body" on-submit="createArticle"></quick-post-article>
 
 
     <div ng-show="post.id">
-      <label>Title</label>
-      <div editable-text="post.label" onbeforesave="updateArticle($data)">{{ post.label }}</div>
+      <small><a ng-href="{{post.self}}" target="_blank">See on backend</a></small>
+
+      <div class="form-group">
+        <label>Title</label>
+        <div editable-text="post.label" onbeforesave="updateArticle($data)">{{ post.label }}</div>
+      </div>
     </div>
 
 
