@@ -13,6 +13,7 @@ angular.module('angularDrupalFromsExampleApp')
       restrict: 'E',
       scope: {
         post: '=post',
+        errors: '=errors',
         onSubmit: '=onSubmit'
       },
       link: function postLink(scope, element, attrs) {

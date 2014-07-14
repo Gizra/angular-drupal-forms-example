@@ -22,6 +22,9 @@ angular.module('angularDrupalFromsExampleApp')
       body: 'The body, with Gizra'
     };
 
+    // Error from the serverSide.
+    $scope.serverSideErrors = {};
+
     /**
      * Login a user, and get the access token from the server.
      */
@@ -42,7 +45,10 @@ angular.module('angularDrupalFromsExampleApp')
       Articlesresource.createArticle(data)
         .success(function(data) {
           $scope.post = data;
-      });
+        })
+        .error(function(data) {
+          $scope.errors = data.errors;
+        });
     };
 
     /**

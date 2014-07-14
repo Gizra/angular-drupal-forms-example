@@ -12,7 +12,8 @@ angular.module('angularDrupalFromsExampleApp')
       templateUrl: 'scripts/directives/inlineEditArticle/index.html',
       restrict: 'E',
       scope: {
-        post: '=post'
+        post: '=post',
+        errors: '=errors'
       },
       link: function postLink(scope, element, attrs) {
         scope.$watch('post.body', function() {
