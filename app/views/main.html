@@ -23,15 +23,7 @@
 
     <quick-post-article ng-hide="post.id" label="post.label" body="post.body" on-submit="createArticle"></quick-post-article>
 
-
-    <div ng-show="post.id">
-      <small><a ng-href="{{post.self}}" target="_blank">See on backend</a></small>
-
-      <div class="form-group">
-        <label>Title</label>
-        <div editable-text="post.label" onbeforesave="updateArticle($data)">{{ post.label }}</div>
-      </div>
-    </div>
+    <inline-edit-article ng-show="post.id" label="post.label" body="post.body"></inline-edit-article>
 
 
   </div>

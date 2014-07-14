@@ -4,5 +4,5 @@
   <label>Title</label>
   <div editable-text="label" onbeforesave="updateArticle($data, 'label')">{{ label }}</div>
 
-  <div editable-text="body" onbeforesave="updateArticle($data, 'body')">{{ body }}</div>
+  <div editable-textarea="body" onbeforesave="updateArticle($data, 'body')">{{ body }}</div>
 </div>
