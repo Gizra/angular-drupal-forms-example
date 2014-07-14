@@ -8,7 +8,7 @@
  * Service in the angularDrupalFromsExampleApp.
  */
 angular.module('angularDrupalFromsExampleApp')
-  .service('Articlesresource', function Articlesresource(DrupalAuthenticate, $http, $log) {
+  .service('Articlesresource', function Articlesresource(DrupalAuthenticate, $http) {
 
     return {
       /**

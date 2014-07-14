@@ -1,8 +1,7 @@
 <small><a ng-href="{{post.self}}" target="_blank">See on backend</a></small>
 
 <div class="form-group">
-  <label>Title</label>
-  <div editable-text="label" onbeforesave="updateArticle($data, 'label')">{{ label }}</div>
+  <div editable-text="post.label" onbeforesave="updateArticle($data, 'label')">{{ post.label }}</div>
 
-  <div editable-textarea="body" onbeforesave="updateArticle($data, 'body')">{{ body }}</div>
+  <div editable-textarea="post.body" onbeforesave="updateArticle($data, 'body')">{{ post.body }}</div>
 </div>

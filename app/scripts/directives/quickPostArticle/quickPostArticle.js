@@ -12,17 +12,12 @@ angular.module('angularDrupalFromsExampleApp')
       templateUrl: 'scripts/directives/quickPostArticle/index.html',
       restrict: 'E',
       scope: {
-        label: '=label',
-        body: '=body',
+        post: '=post',
         onSubmit: '=onSubmit'
       },
       link: function postLink(scope, element, attrs) {
         scope.submitForm = function() {
-          var data = {
-            label: scope.label,
-            body: scope.body
-          };
-          scope.onSubmit(data);
+          scope.onSubmit(scope.post);
         }
       }
     };

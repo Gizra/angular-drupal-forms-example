@@ -8,7 +8,7 @@
  * Service in the angularDrupalFromsExampleApp.
  */
 angular.module('angularDrupalFromsExampleApp')
-  .service('DrupalAuthenticate', function DrupalAuthenticate($q, $http, $log) {
+  .service('DrupalAuthenticate', function DrupalAuthenticate($q, $http) {
 
     var cache = {
       backendUrl: null,
@@ -104,7 +104,6 @@ angular.module('angularDrupalFromsExampleApp')
           }
         }).
           success(function(data, status, headers, config) {
-            $log.log(data);
             self.setToken(data['access_token'])
             defer.resolve(data['access_token']);
           }).

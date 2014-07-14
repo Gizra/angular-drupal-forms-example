@@ -12,10 +12,7 @@ angular.module('angularDrupalFromsExampleApp')
       templateUrl: 'scripts/directives/inlineEditArticle/index.html',
       restrict: 'E',
       scope: {
-        label: '=label',
-        body: '=body',
-      },
-      link: function postLink(scope, element, attrs) {
+        post: '=post'
       }
     };
   });

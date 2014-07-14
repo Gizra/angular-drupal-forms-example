@@ -21,9 +21,9 @@
 
   <div ng-show="authenticated">
 
-    <quick-post-article ng-hide="post.id" label="post.label" body="post.body" on-submit="createArticle"></quick-post-article>
+    <quick-post-article ng-hide="post.id" post="post" on-submit="createArticle"></quick-post-article>
 
-    <inline-edit-article ng-show="post.id" label="post.label" body="post.body"></inline-edit-article>
+    <inline-edit-article ng-show="post.id" post="post"></inline-edit-article>
 
 
   </div>
