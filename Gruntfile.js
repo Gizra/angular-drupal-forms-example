@@ -368,6 +368,17 @@ module.exports = function (grunt) {
       }
     },
 
+    buildcontrol: {
+      dist: {
+        options: {
+          remote: 'git@github.com:Gizra/angular-drupal-forms-example.git',
+          branch: 'gh-pages',
+          commit: true,
+          push: true
+        }
+      }
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
@@ -442,5 +453,11 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'test',
+    'build',
+    'buildcontrol'
   ]);
 };
