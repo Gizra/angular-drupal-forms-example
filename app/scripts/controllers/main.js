@@ -62,9 +62,12 @@ angular.module('angularDrupalFromsExampleApp')
     $scope.updateArticle = function(data, fieldName) {
       var sendData = {};
       sendData[fieldName] = data;
-      Articlesresource.updateArticle(sendData, $scope.post.id)
+      return Articlesresource.updateArticle(sendData, $scope.post.id)
         .success(function(data) {
           $scope.post = data;
+        })
+        .error(function(data) {
+          $scope.errors = data.errors;
         });
     }
   });
