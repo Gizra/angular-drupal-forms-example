@@ -1,14 +1,22 @@
-<small><a ng-href="{{post.self}}" target="_blank">See on backend</a></small>
+<small><a ng-href="{{post.self}}" target="_blank">See the content on the server</a>. Click on title and body to inline edit.</small>
 
-<div class="form-group">
-  <div editable-text="post.label" onbeforesave="updateArticle($data, 'label')">{{ post.label }}</div>
+<div class="form-group article-edit">
+  <div class="editable-wrapper">
+    <a editable-text="post.label" onbeforesave="updateArticle($data, 'label')">{{ post.label }}</a>
+    <div class="errors">
+      <ul ng-show="errors.label">
+        <li ng-repeat="error in errors.label">{{error}}</li>
+      </ul>
+    </div>
+  </div>
 
-  <div editable-textarea="post.body" onbeforesave="updateArticle($data, 'body')">{{ post.body }}</div>
-
-  <div class="errors">
-    <ul ng-show="errors.body">
-      <li ng-repeat="error in errors.body">{{error}}</li>
-    </ul>
+  <div class="editable-wrapper">
+    <a editable-textarea="post.body" onbeforesave="updateArticle($data, 'body')">{{ post.body }}</a>
+    <div class="errors">
+      <ul ng-show="errors.body">
+        <li ng-repeat="error in errors.body">{{error}}</li>
+      </ul>
+    </div>
   </div>
 
 </div>

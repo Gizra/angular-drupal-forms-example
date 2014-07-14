@@ -94,3 +94,19 @@ body {
 .errors {
   color: red;
 }
+
+.article-edit {
+  border-radius: 5px;
+  border: 1px solid $gray;
+  padding: 20px;
+  margin-top: 20px;
+
+  .editable-wrapper {
+    padding: 10px 0;
+
+    .editable {
+      font-size: 40px;
+    }
+  }
+
+}
