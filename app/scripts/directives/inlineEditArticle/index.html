@@ -11,7 +11,7 @@
   </div>
 
   <div class="editable-wrapper">
-    <a editable-textarea="post.body" onbeforesave="updateArticle($data, 'body')">{{ post.body }}</a>
+    <a ng-bind-html="post.body" editable-textangular="post.body" onbeforesave="updateArticle($data, 'body')">{{ post.body }}</a>
     <div class="errors">
       <ul ng-show="errors.body">
         <li ng-repeat="error in errors.body">{{error}}</li>

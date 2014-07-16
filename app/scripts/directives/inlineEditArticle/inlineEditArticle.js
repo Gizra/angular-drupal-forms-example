@@ -17,10 +17,6 @@ angular.module('angularDrupalFormsExampleApp')
         onSubmit: '=onSubmit'
       },
       link: function postLink(scope, element, attrs) {
-        scope.$watch('post.body', function() {
-          scope.post.body = String(scope.post.body).replace(/<[^>]+>/gm, '');
-        });
-
         scope.updateArticle = function(data, fieldName) {
           return scope.onSubmit(data, fieldName);
         }
