@@ -10,7 +10,7 @@
 angular.module('angularDrupalFormsExampleApp')
   .controller('MainCtrl', function ($scope, DrupalAuthenticate, Articlesresource, $log) {
     $scope.authenticationData = {
-      backendUrl: 'http://dev-gizra-headless-drupal-inline-edit.gotpantheon.com',
+      backendUrl: 'http://test-gizra-headless-drupal-inline-edit.gotpantheon.com',
       name: 'demo',
       pass: '1234'
     };
