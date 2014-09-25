@@ -1,6 +1,7 @@
 ## Installation
 
-Enable RESTful example and RESTful token auth (temporary: requires [this](https://github.com/Gizra/restful/pull/108) RESTful PR, until it is merged)
+Enable RESTful example and RESTful token auth.
+
 ``drush en -y restful_example restful_token_auth``
 
 In ``settings.php``
